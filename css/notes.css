@@ -1,0 +1,151 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0;
+  grid-auto-flow: row;
+  grid-template-areas: "copyboard" "code";
+}
+
+.copyboard {
+  grid-area: copyboard;
+  background-color: #161723;
+  border-radius: 17px 17px 0 0;
+}
+
+.code {
+  grid-area: code;
+}
+
+code {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+pre {
+  margin: 0;
+  border-radius: 0 0 17px 17px;
+  font-size: 1rem;
+}
+
+.line {
+  position: relative;
+  padding-left: 24px;
+}
+.line:nth-child(1)::before {
+  content: "1   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(2)::before {
+  content: "2   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(3)::before {
+  content: "3   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(4)::before {
+  content: "4   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(5)::before {
+  content: "5   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(6)::before {
+  content: "6   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(7)::before {
+  content: "7   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(8)::before {
+  content: "8   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(9)::before {
+  content: "9   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.line:nth-child(10)::before {
+  content: "10   ";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.copy {
+  text-decoration: none;
+  color: gray;
+}
+.copy::after {
+  vertical-align: middle;
+  content: url("../images/copy-svgrepo-com.svg");
+  padding-left: 10px;
+}
+
+.copyboard {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}/*# sourceMappingURL=notes.css.map */

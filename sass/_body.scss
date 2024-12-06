@@ -1,0 +1,39 @@
+// тело сайта
+
+// импорт переменных и миксинов
+@import "_base.scss";
+
+// шрифт Roblox
+@font-face{
+    font-family: "ROBLOX Regular";
+    src: local("ROBLOX Regular"), url("../fonts/ROBLOX.woff") format("woff");
+}  
+
+// шрифт Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+html{
+    font-size: 100%;
+}
+
+
+.page, #index__body{
+    margin: 0;
+    padding: 0;
+    color: $primary-color;
+    font-family: $font-stack;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: $bg-color;
+    font-size: 1em;
+}
+
+#index__body{
+    background-image: url("../images/font2.jpg");
+    background-size:contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+ 

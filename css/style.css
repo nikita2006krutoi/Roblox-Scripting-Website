@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "ROBLOX Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ROBLOX Regular"), url("../fonts/ROBLOX.woff") format("woff");
+}
+
+html{
+  zoom: 80%;
+}
+body {
+  margin: 0 0;
+  padding: 0 0;
+  /* Размер шрифта */
+  font-size: 2em;
+  color: white;     
+  background-size:cover;
+  background-position:left; 
+ /* background: radial-gradient( #24334f 35%,  rgb(38, 42, 58) 100%); */
+  background-color: rgb(25, 25, 25);
+}
+#index{
+  background-image: url("../images/rb3.jpg");
+}
+.title{
+  font-family: "Roblox Regular", sans-serif;
+  padding-top: 100px;
+  text-align: center;
+  text-shadow: 0 0 10000px white;
+}
+#title_RobloxStudio{
+  letter-spacing: 2px;
+  font-size: 80px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+.boxheader {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%; /* Шапка займёт всю ширину окна браузера */
+  z-index: 800; /* Высокое значение, чтобы шапка была всегда на первом плане */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; 
+  font-family: monospace;
+}
+.header{
+  margin: auto;
+  margin-top: 20px;
+  width: 85%;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: rgba(25, 25, 25, 0.61);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+  align-items: center; 
+  border-radius: 17px;
+  backdrop-filter: blur(80px);
+}
+.header__nav a {   
+  font-size: 24px;
+  cursor: pointer;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+
+}
+.header__nav a:hover {
+  opacity: 0.67;
+}
+.header__nav a.active {
+  opacity: 1;
+}
+span{
+  display: block; 
+  width: 40px;
+  position: absolute;
+  height: 3px;
+  border-radius: 17px;
+  background-color: white;
+  top: 3.2rem;
+}
+.header__logo{
+  font-family: "Roblox Regular";
+  letter-spacing: 1px;
+}
+/*.header__logo::before{  
+  vertical-align: middle;
+  content: url("icon_white.svg"); 
+}*/
+.header__list {
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+}
+.button {
+  padding-left: 1.6em;
+  padding-right: 1.6em;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  background-color: #086aa7;
+  border-radius: 12px;
+  transition: all 0.27s;
+  border: 2px double #086aa7;
+}
+.button:hover {
+  opacity: 0.9;
+  background-color: transparent;
+}
+@media (width <= 500px) {
+  .boxheader, .header__nav{
+    flex-direction: column;
+  }
+  
+}
+.main__list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 45px;
+  font-family: 'Courier New';
+  font-weight: 100;
+  margin: 20% 20%;
+  margin-top: 0;
+}
+.main__list li{
+  backdrop-filter: blur(3px);
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-right: 8%;
+  margin-left: 8%;
+  padding-top: 5%;
+}
+.elements .title{
+  text-align: left; 
+}
+.elements{
+  border-radius: 30px;
+  padding: 30px;
+}

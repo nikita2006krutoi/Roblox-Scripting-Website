@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roblox Scripting</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="roblox, roblox studio,  Lua, roblox development, lua documentation"
+    />
+    <meta
+      name="description"
+      content="Сайт для изучения Roblox Studio и основ Lua"
+    />
+    <link
+      rel="icon"
+      href="../images/icon_white.svg"
+    />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <script src="../scripts/main.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li id="header__logo"><a href="../index.html">Scripting</a></li>
+          <li><a href="" class="active">Синтаксис<span></span></a></li>
+          <li><a href="guide.html">Гайды</a></li>
+          <li><a href="tasks.html">Задачи</a></li>
+        </ul>
+        <a href="" class="button">Начать</a>
+      </nav>
+
+  </header>
+    <main class="main">
+        <h1 class="title">Основы Luau</h1>
+        <p>
+          В настоящее время в Roblox Studio используется язык программирования Luau - 
+          производный язык от Lua. Все рекомендации и документация, применяемая к Lua, также применима к Luau.
+          С полной документацией можно ознакомиться <a href="">здесь</a>.
+        </p>
+        <p>
+          <h2 class="title">Переменные</h2>
+          <h3>Имена переменных</h3>
+          <p>
+            Именами переменных могут быть любые незарезервированные строки из букв, цифр и знаков подчёркивания, которые не начинаются с цифры.
+          </p>
+          <div class="container">
+            <div class="copyboard">
+              <span class="span-copy">Luau</span>
+              <button class="button-copy">Copy</button>
+            </div>
+            <div class="code">
+              <pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#00E8C6">LETTERS</span><span style="color:#A0A1A7CC">   -- valid</span></div><div class="line"><span style="color:#00E8C6">a1</span><span style="color:#A0A1A7CC">        -- valid</span></div><div class="line"><span style="color:#00E8C6">var_name</span><span style="color:#A0A1A7CC">  -- valid</span></div><div class="line"><span style="color:#00E8C6">_test</span><span style="color:#A0A1A7CC">     -- valid</span></div><div class="line">
+              </div><div class="line"><span style="color:#C74DED">if</span><span style="color:#A0A1A7CC">        -- NOT valid</span></div><div class="line"><span style="color:#F39C12">25</span><span style="color:#D5CED9">th      </span><span style="color:#A0A1A7CC">-- NOT valid</span></div></code></pre>
+            </div>
+          </div>
+        <h3>Зарезервированные имена</h3>
+        <ul>
+          <li>and</li>
+          <li>for</li>
+          <li>or</li>
+          <li>break</li>
+          <li>function</li>
+          <li>repeat</li>
+          <li>do</li>
+          <li>if</li>
+          <li>return</li>
+          <li>else</li>
+          <li>и т.д.</li>
+        </ul>
+        <h2>Присвоение значений</h2>
+        <p>
+          Чтобы создать переменную и присвоить ей значение, используйте оператор =. 
+          Переменную поместите слева от =, а значение — справа. Если вы не укажете значение, оно будет равно nil.
+        </p>
+        <p>
+          Переменные могут иметь глобальную или локальную область видимости. 
+          По умолчанию они имеют глобальную область видимости, но почти всегда лучше создавать их с локальной областью видимости, 
+          потому что Luau быстрее обращается к локальным переменным, чем к глобальным. Чтобы задать переменной локальную область видимости, 
+          поставьте ключевое слово local перед именем переменной, когда присваиваете ей значение. 
+        </p>
+        <div class="container">
+          <div class="copyboard">
+            <span class="span-copy">Luau</span>
+            <button class="button-copy">Copy</button>
+          </div>
+          <div class="code">
+            <pre class="andromeeda" style="background-color:#23262E;color:#D5CED9" tabindex="0"><code><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> nilVar</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> x</span><span style="color:#EE5D43"> =</span><span style="color:#F39C12"> 10</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> word</span><span style="color:#EE5D43"> =</span><span style="color:#96E072"> "Hello"</span></div><div class="line"><span style="color:#C74DED">local</span><span style="color:#00E8C6"> reference</span><span style="color:#EE5D43"> =</span><span style="color:#00E8C6"> workspace</span><span style="color:#D5CED9">.Camera</span></div><div class="line"><span style="color:#FFE66D">print</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">nilVar</span><span style="color:#D5CED9">) </span><span style="color:#A0A1A7CC">-- nil</span></div><div class="line"><span style="color:#FFE66D">print</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">x</span><span style="color:#D5CED9">) </span><span style="color:#A0A1A7CC">-- 10</span></div><div class="line"><span style="color:#FFE66D">print</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">word</span><span style="color:#D5CED9">) </span><span style="color:#A0A1A7CC">-- Hello</span></div><div class="line"><span style="color:#FFE66D">print</span><span style="color:#D5CED9">(</span><span style="color:#00E8C6">reference</span><span style="color:#D5CED9">) </span><span style="color:#A0A1A7CC">-- Camera</span></div></code></pre>
+          </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <hr>
+      <ul class="footer__list">
+        <li><a href="">ТГ</a></li>
+        <li><a href="">ДС</a></li>
+        <li><a href="">ТТ</a></li>
+        <li><a href="">PT</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

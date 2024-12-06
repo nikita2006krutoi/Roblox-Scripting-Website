@@ -1,0 +1,34 @@
+// все сбросы стилей, переменные, миксины и служебные классы.
+$primary-color: white;
+$font-stack: "Montserrat", sans-serif;
+$bg-color: rgb(25,25,25);
+$bg-color-opacity: rgb(25,25,25, 0.61);
+$button-color: #086aa7;
+$line-count: 10; // общее количество элементов .line
+
+@mixin flexbox-content($direction: row, $content: center){
+    display: flex;
+    justify-content: $content;
+    flex-direction: $direction;
+    vertical-align: middle;
+    align-items: center; 
+}
+@mixin button{
+    @include flexbox-content;
+    border-radius: 12px;
+    padding-left: 1.6em;
+    padding-right: 1.6em; 
+    transition: all 0.27s;
+    &:hover {
+        opacity: 0.7;
+        background-color: transparent;
+      }
+}
+@mixin user-select{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
+}
